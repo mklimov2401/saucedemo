@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AutoTemplate" />
+        <module name="saucedemo" />
         <module name="XYZ Bank" />
         <module name="Demo" />
       </profile>

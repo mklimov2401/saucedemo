@@ -13,6 +13,21 @@ public interface GeneralConfig extends Config {
     @Key("prod.hostname")
     String hostname();
 
+    @Key("prod.standardUser")
+    String standardUser();
+
+    @Key("prod.lockedOutUser")
+    String lockedOutUser();
+
+    @Key("prod.problemUser")
+    String problemUser();
+
+    @Key("prod.performanceGlitchUser")
+    String performanceGlitchUser();
+
+    @Key("prod.password")
+    String password();
+
     @DefaultValue("chrome")
     String browser();
 
