@@ -1,8 +1,7 @@
 package ru.klimov;
 
-import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
-import pageObjects.SauceDemoPageObject;
+import ru.klimov.pageObjects.LoginPageObject;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -12,12 +11,12 @@ public class TitleSauceDemoTest extends BaseTest {
 
     @Test
     void openTitlePageSauceDemo() {
-        SauceDemoPageObject s = page(SauceDemoPageObject.class);
+        LoginPageObject login = page(LoginPageObject.class);
 
         open(config.hostname());
-        $(s.getUserName()).shouldBe(enabled);
-        $(s.getPassword()).shouldBe(enabled);
-        $(s.getLoginButton()).shouldBe(enabled);
+        login.userName.shouldBe(enabled);
+        login.password.shouldBe(enabled);
+        login.loginButton.shouldBe(enabled);
 
     }
 }
