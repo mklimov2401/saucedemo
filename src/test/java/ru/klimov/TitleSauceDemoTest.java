@@ -14,6 +14,7 @@ public class TitleSauceDemoTest extends BaseTest {
         LoginPageObject login = page(LoginPageObject.class);
 
         open(config.hostname());
+
         login.userName.shouldBe(enabled);
         login.password.shouldBe(enabled);
         login.loginButton.shouldBe(enabled);

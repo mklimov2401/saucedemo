@@ -12,11 +12,18 @@ public class ProductsPageObject {
     public final SelenideElement backpack = $(By.xpath(".//button[@id='add-to-cart-sauce-labs-backpack']"));
     public final SelenideElement onesie = $(By.xpath(".//button[@id='add-to-cart-sauce-labs-onesie']"));
     public final SelenideElement shoppingCartLink = $(By.xpath(".//a[@class='shopping_cart_link']"));
+    public final SelenideElement removeOnesie = $("#remove-sauce-labs-onesie");
     public final ElementsCollection inventoryItemName = $$(".inventory_item_name");
     public final ElementsCollection inventoryItemPrice = $$(".inventory_item_price");
 
     public SelenideElement getCart(int index) {
         return inventoryItemName.get(index);
+    }
+    public void getItemNotCart(String name) {
+        for (SelenideElement e :
+                inventoryItemName) {
+            e.shouldNotBe(Condition.text(name));
+        }
     }
     public SelenideElement getCartPrice(int index) {
         return inventoryItemPrice.get(index);
