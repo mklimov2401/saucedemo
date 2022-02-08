@@ -1,9 +1,9 @@
 package ru.klimov.standard;
 
 import org.junit.jupiter.api.Test;
+import pageObjects.LoginPageObject;
+import pageObjects.ProductsPageObject;
 import ru.klimov.BaseTest;
-import ru.klimov.pageObjects.LoginPageObject;
-import ru.klimov.pageObjects.ProductsPageObject;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;

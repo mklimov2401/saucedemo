@@ -1,8 +1,8 @@
 package ru.klimov.standard;
 
 import org.junit.jupiter.api.Test;
+import pageObjects.ProductsPageObject;
 import ru.klimov.BaseTest;
-import ru.klimov.pageObjects.ProductsPageObject;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Selenide.page;

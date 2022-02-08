@@ -1,10 +1,11 @@
 package ru.klimov;
 
 import org.junit.jupiter.api.Test;
-import ru.klimov.pageObjects.LoginPageObject;
+import pageObjects.LoginPageObject;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.enabled;
+import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.page;
 
 public class TitleSauceDemoTest extends BaseTest {
 
