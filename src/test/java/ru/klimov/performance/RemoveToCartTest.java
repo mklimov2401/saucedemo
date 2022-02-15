@@ -7,12 +7,12 @@ import ru.klimov.BaseTest;
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Selenide.page;
 
-public class RemoveToCart extends BaseTest {
+public class RemoveToCartTest extends BaseTest {
 
     @Test
     void removeToCartTest() {
         ProductsPageObject products = page(ProductsPageObject.class);
-        AddToCart add = new AddToCart();
+        AddToCartTest add = new AddToCartTest();
         add.addToCartTest();
 
         products.removeOnesie.click();

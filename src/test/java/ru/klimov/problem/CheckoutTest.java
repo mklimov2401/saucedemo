@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 
-public class Checkout extends BaseTest {
+public class CheckoutTest extends BaseTest {
 
     @Test
     void checkOutProblem() {

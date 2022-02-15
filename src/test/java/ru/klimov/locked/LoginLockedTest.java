@@ -1,29 +1,25 @@
-package ru.klimov.performance;
+package ru.klimov.locked;
 
 import org.junit.jupiter.api.Test;
 import pageObjects.LoginPageObject;
-import pageObjects.ProductsPageObject;
 import ru.klimov.BaseTest;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 
-public class LoginPerformance extends BaseTest {
+public class LoginLockedTest extends BaseTest {
 
 
     @Test
-    void loginInPerformanceUserTest() {
+    void loginInLockedUserTest() {
         LoginPageObject login = page(LoginPageObject.class);
-        ProductsPageObject products = page(ProductsPageObject.class);
 
         open(config.hostname());
 
-        login.userName.setValue(config.performanceGlitchUser());
+        login.userName.setValue(config.lockedOutUser());
         login.password.setValue(config.password());
         login.loginButton.click();
-
-        products.title.shouldHave(text("PRODUCTS"));
-
+        login.error.shouldBe(text("Epic sadface: Sorry, this user has been locked out."));
     }
 }

@@ -1,4 +1,4 @@
-package ru.klimov.performance;
+package ru.klimov.standard;
 
 import org.junit.jupiter.api.Test;
 import pageObjects.CheckoutPageObject;
@@ -9,13 +9,13 @@ import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.page;
 
-public class Checkout extends BaseTest {
+public class CheckoutTest extends BaseTest {
 
     @Test
     void checkOut() {
         CheckoutPageObject check = page(CheckoutPageObject.class);
         ProductsPageObject products = page(ProductsPageObject.class);
-        AddToCart add = new AddToCart();
+        AddToCartTest add = new AddToCartTest();
         add.addToCartTest();
 
         check.checkout.click();

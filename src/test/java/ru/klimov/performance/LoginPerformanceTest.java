@@ -1,4 +1,4 @@
-package ru.klimov.standard;
+package ru.klimov.performance;
 
 import org.junit.jupiter.api.Test;
 import pageObjects.LoginPageObject;
@@ -9,17 +9,17 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 
-public class Login extends BaseTest {
+public class LoginPerformanceTest extends BaseTest {
 
 
     @Test
-    void loginInStandardUserTest() {
+    void loginInPerformanceUserTest() {
         LoginPageObject login = page(LoginPageObject.class);
         ProductsPageObject products = page(ProductsPageObject.class);
 
         open(config.hostname());
 
-        login.userName.setValue(config.standardUser());
+        login.userName.setValue(config.performanceGlitchUser());
         login.password.setValue(config.password());
         login.loginButton.click();
 
