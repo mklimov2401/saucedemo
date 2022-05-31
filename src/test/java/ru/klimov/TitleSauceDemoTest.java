@@ -9,7 +9,9 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class TitleSauceDemoTest extends BaseTest {
 
-
+    /*
+    1
+     */
     @Test
     void openTitlePageSauceDemo() {
         LoginPageObject login = page(LoginPageObject.class);
